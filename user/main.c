@@ -47,7 +47,7 @@ int main(void){
 		
 		if(SensorLeft_Get() == 1 && SensorRight_Get() == 1){
 			LED4_ON();
-            LED5_ON(); 
+            		LED5_ON(); 
 			//LeftMotor_Run(MIDDLE);
 			//RightMotor_Run(MIDDLE);
 			/***
@@ -62,21 +62,21 @@ int main(void){
 			***/
 		}
 		
-		if (SensorLeft_Get() == 1 && SensorRight_Get() == 0) {  // ¼ÙÉè Sensor1_Get() ·µ»Ø 1 ±íÊ¾Ê¶±ğµ½ºÚÏß
-            LED4_ON();  // ×ó²à´«¸ĞÆ÷Ê¶±ğµ½ºÚÏß£¬LEDÁÁÆğ
+		if (SensorLeft_Get() == 1 && SensorRight_Get() == 0) {  // å‡è®¾ Sensor1_Get() è¿”å› 1 è¡¨ç¤ºè¯†åˆ«åˆ°é»‘çº¿
+            		LED4_ON();  // å·¦ä¾§ä¼ æ„Ÿå™¨è¯†åˆ«åˆ°é»‘çº¿ï¼ŒLEDäº®èµ·
 			LED5_OFF();
 			//RightMotor_Run(HIGH);
-			LeftMotor_Run (LOW);
+			//LeftMotor_Run (LOW);
 			MotorLeft_Stop();
 			
         } 
 
-        // ¼ì²âÓÒ²à´«¸ĞÆ÷×´Ì¬
-        if (SensorLeft_Get() == 0 && SensorRight_Get() == 1) {  // ¼ÙÉè Sensor4_Get() ·µ»Ø 1 ±íÊ¾Ê¶±ğµ½ºÚÏß
+        // æ£€æµ‹å³ä¾§ä¼ æ„Ÿå™¨çŠ¶æ€
+        if (SensorLeft_Get() == 0 && SensorRight_Get() == 1) {  // å‡è®¾ Sensor4_Get() è¿”å› 1 è¡¨ç¤ºè¯†åˆ«åˆ°é»‘çº¿
 			LED4_OFF();
-            LED5_ON();  // ÓÒ²à´«¸ĞÆ÷Ê¶±ğµ½ºÚÏß£¬LED ÁÁÆğ
+            		LED5_ON();  // å³ä¾§ä¼ æ„Ÿå™¨è¯†åˆ«åˆ°é»‘çº¿ï¼ŒLED äº®èµ·
 			//LeftMotor_Run(HIGH);
-			RightMotor_Run (LOW);
+			//RightMotor_Run (LOW);
 			MotorRight_Stop();
 			
         } 
